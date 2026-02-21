@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BGK Construction & Materials | Tumkur, Karnataka</title>
+
+<!-- SVG Favicon - BGK Logo -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23C1440E'/%3E%3Crect x='4' y='4' width='56' height='56' rx='6' fill='none' stroke='%23F0A500' stroke-width='2'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='26' font-weight='bold' text-anchor='middle' fill='%23FFF8E7' letter-spacing='1'%3EBGK%3C/text%3E%3C/svg%3E">
+
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Kannada&family=Playfair+Display:wght@600;700;800&family=Lato:wght@300;400;700&family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --terra:    #C1440E;
+  --terra-dk: #9A3209;
+  --ochre:    #D4830A;
+  --amber:    #F0A500;
+  --sand:     #EDD9B0;
+  --cream:    #FBF4E6;
+  --parchment:#F5EDD6;
+  --mud:      #6B4226;
+  --earth:    #4A2E1A;
+  --sage:     #6B7C5C;
+  --stone:    #8C7B6E;
+  --ivory:    #FFFAF0;
+  --ink:      #2A1A0E;
+  --r: 6px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Lato',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden;}
+::-webkit-scrollbar{width:7px;}
+::-webkit-scrollbar-track{background:var(--cream);}
+::-webkit-scrollbar-thumb{background:var(--terra);border-radius:4px;}
+
+/* ---- NAV ---- */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  background:rgba(251,244,230,0.97);backdrop-filter:blur(12px);
+  border-bottom:3px solid var(--terra);
+  padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px;
+  box-shadow:0 2px 20px rgba(193,68,14,0.12);
+}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.logo-emblem{
+  width:46px;height:46px;background:var(--terra);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  border:3px solid var(--amber);box-shadow:0 2px 12px rgba(193,68,14,0.4);
+  flex-shrink:0;
+}
+.logo-main{font-family:'Cinzel';font-size:19px;font-weight:700;color:var(--terra);letter-spacing:3px;line-height:1;}
+.logo-sub{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--ochre);margin-top:2px;}
+.nav-links{display:flex;gap:24px;list-style:none;}
+.nav-links a{color:var(--mud);text-decoration:none;font-weight:700;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;transition:.2s;position:relative;padding-bottom:3px;}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--terra);transition:.3s;}
+.nav-links a:hover{color:var(--terra);}
+.nav-links a:hover::after{width:100%;}
+.nav-cta{background:var(--terra);color:var(--ivory);padding:9px 20px;border-radius:var(--r);text-decoration:none;font-weight:700;font-size:12px;letter-spacing:1px;text-transform:uppercase;border:2px solid var(--terra);transition:.2s;}
+.nav-cta:hover{background:var(--terra-dk);}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;}
+.hamburger span{display:block;width:24px;height:2px;background:var(--terra);border-radius:2px;}
+.mobile-menu{display:none;position:fixed;top:70px;left:0;right:0;background:var(--ivory);z-index:999;border-bottom:3px solid var(--terra);padding:10px 5% 20px;box-shadow:0 8px 30px rgba(42,26,14,0.15);}
+.mobile-menu.open{display:block;}
+.mobile-menu a{display:block;padding:13px 0;color:var(--mud);text-decoration:none;font-weight:700;letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid var(--sand);font-size:14px;}
+.mobile-menu a:last-child{border-bottom:none;}
+
+/* ---- HERO ---- */
+.hero{
+  min-height:100vh;
+  background:linear-gradient(160deg,#2A1A0E 0%,#4A2E1A 45%,#6B4226 100%);
+  display:flex;align-items:center;padding:110px 5% 70px;
+  position:relative;overflow:hidden;
+}
+.hero-pat{
+  position:absolute;inset:0;opacity:0.06;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Ccircle cx='40' cy='40' r='30' fill='none' stroke='%23F0A500' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23F0A500' stroke-width='.7'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23F0A500' stroke-width='.5'/%3E%3Cline x1='10' y1='40' x2='70' y2='40' stroke='%23F0A500' stroke-width='.4'/%3E%3Cline x1='40' y1='10' x2='40' y2='70' stroke='%23F0A500' stroke-width='.4'/%3E%3Cline x1='18' y1='18' x2='62' y2='62' stroke='%23F0A500' stroke-width='.3'/%3E%3Cline x1='62' y1='18' x2='18' y2='62' stroke='%23F0A500' stroke-width='.3'/%3E%3C/svg%3E");
+  background-size:80px 80px;
+}
+.hero-glow{position:absolute;top:15%;right:8%;width:480px;height:480px;background:radial-gradient(circle,rgba(240,165,0,0.1) 0%,transparent 70%);border-radius:50%;}
+.hero-content{position:relative;z-index:2;max-width:660px;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(240,165,0,0.14);border:1px solid rgba(240,165,0,0.4);padding:7px 16px;border-radius:30px;font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--amber);margin-bottom:28px;}
+.hero h1{font-family:'Playfair Display';font-size:clamp(48px,8vw,92px);line-height:0.95;margin-bottom:22px;color:var(--ivory);font-weight:800;}
+.hero h1 em{font-style:normal;color:var(--amber);}
+.hero-rule{width:80px;height:4px;margin:22px 0;background:linear-gradient(90deg,var(--terra),var(--amber),transparent);border-radius:2px;}
+.hero p{font-size:16px;line-height:1.85;color:rgba(251,244,230,0.75);margin-bottom:36px;max-width:510px;}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-p{background:var(--terra);color:var(--ivory);padding:13px 28px;border-radius:var(--r);text-decoration:none;font-weight:700;font-size:13px;letter-spacing:1px;text-transform:uppercase;border:2px solid var(--terra);transition:.3s;display:inline-flex;align-items:center;gap:9px;}
+.btn-p:hover{background:var(--terra-dk);transform:translateY(-2px);box-shadow:0 8px 22px rgba(193,68,14,0.4);}
+.btn-o{background:transparent;color:var(--sand);padding:13px 28px;border-radius:var(--r);text-decoration:none;font-weight:700;font-size:13px;letter-spacing:1px;text-transform:uppercase;border:2px solid rgba(237,217,176,0.35);transition:.3s;display:inline-flex;align-items:center;gap:9px;}
+.btn-o:hover{border-color:var(--amber);color:var(--amber);}
+.hero-stats{display:flex;gap:36px;margin-top:48px;padding-top:36px;border-top:1px solid rgba(237,217,176,0.18);flex-wrap:wrap;}
+.hs-num{font-family:'Playfair Display';font-size:38px;color:var(--amber);font-weight:700;line-height:1;}
+.hs-lbl{font-size:11px;color:rgba(237,217,176,0.6);letter-spacing:2px;text-transform:uppercase;margin-top:5px;}
+.hero-cards{position:absolute;right:5%;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:14px;z-index:2;}
+.hc{background:rgba(251,244,230,0.06);border:1px solid rgba(240,165,0,0.18);border-radius:var(--r);padding:14px 18px;display:flex;align-items:center;gap:12px;backdrop-filter:blur(4px);min-width:195px;}
+.hc-icon{font-size:26px;}
+.hc-txt{font-size:12px;color:var(--sand);font-weight:700;}
+.hc-txt span{display:block;font-size:10px;color:var(--amber);text-transform:uppercase;letter-spacing:1.5px;margin-top:2px;}
+
+/* ---- BANNER ---- */
+.banner{background:var(--terra);padding:10px 0;overflow:hidden;border-top:2px solid var(--terra-dk);border-bottom:2px solid var(--terra-dk);}
+.banner-inner{display:flex;gap:48px;animation:marquee 22s linear infinite;white-space:nowrap;}
+.bi{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--ivory);display:flex;align-items:center;gap:9px;}
+.bd{width:6px;height:6px;background:var(--amber);border-radius:50%;flex-shrink:0;}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ---- COMMON SECTION ---- */
+section{padding:86px 5%;}
+.stag{display:inline-block;background:rgba(193,68,14,0.1);border-left:3px solid var(--terra);color:var(--terra);font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;padding:5px 12px 5px 10px;border-radius:0 3px 3px 0;margin-bottom:14px;}
+.stag.c{border-left:none;border:1px solid rgba(193,68,14,0.3);border-radius:30px;padding:5px 15px;}
+.stitle{font-family:'Playfair Display';font-size:clamp(30px,4.5vw,50px);line-height:1.1;margin-bottom:12px;color:var(--ink);font-weight:700;}
+.ssub{color:var(--stone);font-size:15px;line-height:1.8;max-width:600px;}
+.sh{margin-bottom:52px;}
+.sh.c{text-align:center;}
+.sh.c .ssub{margin:0 auto;}
+.orn{display:flex;align-items:center;gap:11px;margin-top:14px;}
+.orn-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(193,68,14,0.25),transparent);}
+.orn-d{width:8px;height:8px;background:var(--terra);transform:rotate(45deg);}
+
+/* ---- SERVICES ---- */
+#services{background:var(--parchment);position:relative;}
+#services::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M0 20h40M20 0v40' stroke='rgba(193,68,14,0.04)' stroke-width='1'/%3E%3C/svg%3E");background-size:40px 40px;pointer-events:none;}
+.sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px;position:relative;}
+.sc{background:var(--ivory);border-radius:var(--r);padding:34px 28px;border:1px solid rgba(193,68,14,0.12);box-shadow:0 2px 12px rgba(42,26,14,0.06);transition:.3s;position:relative;overflow:hidden;}
+.sc::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--terra),var(--amber));transform:scaleX(0);transform-origin:left;transition:.3s;}
+.sc:hover{box-shadow:0 8px 28px rgba(193,68,14,0.17);transform:translateY(-4px);border-color:rgba(193,68,14,0.28);}
+.sc:hover::before{transform:scaleX(1);}
+.si{width:62px;height:62px;background:rgba(193,68,14,0.08);border-radius:11px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;border:1px solid rgba(193,68,14,0.12);transition:.3s;}
+.sc:hover .si{background:var(--terra);}
+.sc:hover .si svg{stroke:#fff;}
+.si svg{width:30px;height:30px;stroke:var(--terra);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.sc h3{font-family:'Playfair Display';font-size:20px;font-weight:700;color:var(--ink);margin-bottom:9px;}
+.sc p{color:var(--stone);font-size:14px;line-height:1.75;margin-bottom:18px;}
+.sl{list-style:none;}
+.sl li{font-size:13px;color:var(--mud);padding:5px 0;display:flex;align-items:center;gap:9px;border-bottom:1px dotted rgba(193,68,14,0.1);}
+.sl li:last-child{border-bottom:none;}
+.sl li::before{content:'';width:7px;height:7px;background:var(--terra);border-radius:2px;transform:rotate(45deg);flex-shrink:0;}
+
+/* ---- PRODUCTS ---- */
+#products{background:var(--cream);position:relative;}
+#products .pbg{position:absolute;inset:0;pointer-events:none;opacity:.5;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cpolygon points='30,5 55,20 55,45 30,55 5,45 5,20' fill='none' stroke='rgba(193,68,14,0.06)' stroke-width='1'/%3E%3C/svg%3E");background-size:60px 60px;}
+.ptabs{display:flex;gap:0;margin-bottom:34px;border-bottom:2px solid rgba(193,68,14,0.18);flex-wrap:wrap;position:relative;z-index:1;}
+.tb{background:none;border:none;color:var(--stone);font-family:'Lato';font-weight:700;font-size:12px;letter-spacing:1px;text-transform:uppercase;padding:12px 20px;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px;transition:.2s;display:flex;align-items:center;gap:7px;}
+.tb.a{color:var(--terra);border-bottom-color:var(--terra);}
+.tc{display:none;}
+.tc.a{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:18px;animation:fu .35s;position:relative;z-index:1;}
+@keyframes fu{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.pc{background:var(--ivory);border-radius:var(--r);border:1px solid rgba(193,68,14,0.13);overflow:hidden;transition:.3s;box-shadow:0 2px 8px rgba(42,26,14,0.05);}
+.pc:hover{border-color:var(--terra);transform:translateY(-4px);box-shadow:0 8px 22px rgba(193,68,14,0.15);}
+.pi{height:106px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--parchment),var(--sand));font-size:48px;position:relative;overflow:hidden;}
+.pi::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--terra),var(--amber));transform:scaleX(0);transition:.3s;transform-origin:left;}
+.pc:hover .pi::after{transform:scaleX(1);}
+.pinfo{padding:15px;}
+.pinfo h4{font-family:'Playfair Display';font-size:16px;font-weight:700;color:var(--ink);margin-bottom:5px;}
+.pinfo p{color:var(--stone);font-size:12px;line-height:1.55;}
+.pbadge{display:inline-block;background:rgba(107,124,92,0.12);color:var(--sage);font-size:10px;font-weight:700;letter-spacing:1px;padding:3px 8px;border-radius:3px;margin-top:9px;text-transform:uppercase;}
+
+/* ---- MACHINERY ---- */
+#machinery{background:var(--earth);position:relative;overflow:hidden;}
+#machinery::before{content:'';position:absolute;inset:0;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Crect x='10' y='10' width='80' height='80' fill='none' stroke='%23F0A500' stroke-width='1'/%3E%3Crect x='25' y='25' width='50' height='50' fill='none' stroke='%23F0A500' stroke-width='.7'/%3E%3Ccircle cx='50' cy='50' r='15' fill='none' stroke='%23F0A500' stroke-width='.5'/%3E%3C/svg%3E");background-size:100px 100px;pointer-events:none;}
+#machinery .stitle{color:var(--sand);}
+#machinery .stag{background:rgba(240,165,0,0.14);color:var(--amber);border-left-color:var(--amber);}
+#machinery .ssub{color:rgba(237,217,176,0.6);}
+.mg{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:18px;}
+.mc{background:rgba(251,244,230,0.05);border:1px solid rgba(240,165,0,0.14);border-radius:var(--r);overflow:hidden;transition:.3s;}
+.mc:hover{background:rgba(251,244,230,0.09);border-color:rgba(240,165,0,0.38);transform:translateY(-4px);}
+.mw{height:148px;display:flex;align-items:center;justify-content:center;font-size:60px;background:rgba(251,244,230,0.04);border-bottom:1px solid rgba(240,165,0,0.1);position:relative;overflow:hidden;}
+.mw::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--terra),var(--amber));transform:scaleX(0);transition:.3s;transform-origin:left;}
+.mc:hover .mw::after{transform:scaleX(1);}
+.minfo{padding:18px;}
+.minfo h4{font-family:'Playfair Display';font-size:18px;color:var(--sand);margin-bottom:7px;}
+.minfo p{color:rgba(237,217,176,0.58);font-size:13px;line-height:1.6;}
+.ms{display:flex;gap:7px;flex-wrap:wrap;margin-top:11px;}
+.ms span{background:rgba(240,165,0,0.11);border:1px solid rgba(240,165,0,0.2);font-size:10px;color:var(--amber);padding:3px 9px;border-radius:20px;font-weight:700;}
+
+/* ---- ABOUT ---- */
+#about{background:var(--parchment);position:relative;}
+#about::before{content:'';position:absolute;inset:0;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50'%3E%3Ccircle cx='25' cy='25' r='2' fill='rgba(193,68,14,0.07)'/%3E%3C/svg%3E");background-size:50px 50px;}
+.ag{display:grid;grid-template-columns:1fr 1fr;gap:76px;align-items:center;position:relative;}
+.al p{color:var(--stone);font-size:15px;line-height:1.85;margin-bottom:16px;}
+.fl{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px;}
+.fi{display:flex;align-items:flex-start;gap:11px;}
+.fic{width:38px;height:38px;flex-shrink:0;background:rgba(193,68,14,0.08);border-radius:8px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(193,68,14,0.14);font-size:17px;}
+.ft h5{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:2px;}
+.ft p{font-size:12px;color:var(--stone);}
+.asg{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.sb{background:var(--ivory);border-radius:var(--r);padding:26px 20px;text-align:center;border:1px solid rgba(193,68,14,0.11);box-shadow:0 2px 8px rgba(42,26,14,0.05);transition:.3s;position:relative;overflow:hidden;}
+.sb::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--terra);}
+.sb:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(193,68,14,0.13);}
+.sb.acc{background:var(--terra);border-color:var(--terra);}
+.sb.acc .sbn{color:var(--amber);}
+.sb.acc .sbl{color:rgba(251,244,230,0.78);}
+.sb.acc::before{background:var(--terra-dk);}
+.sbn{font-family:'Playfair Display';font-size:42px;color:var(--terra);font-weight:700;line-height:1;}
+.sbl{font-size:10px;color:var(--stone);margin-top:7px;letter-spacing:1.5px;text-transform:uppercase;}
+
+/* ---- CONTACT ---- */
+#contact{background:var(--cream);}
+.cg{display:grid;grid-template-columns:1fr 1.3fr;gap:56px;}
+.ccards{display:flex;flex-direction:column;gap:13px;margin-top:28px;}
+.cc{background:var(--ivory);border-radius:var(--r);padding:17px 18px;display:flex;align-items:flex-start;gap:13px;border:1px solid rgba(193,68,14,0.11);box-shadow:0 2px 7px rgba(42,26,14,0.05);transition:.3s;text-decoration:none;color:inherit;}
+.cc:hover{border-color:var(--terra);box-shadow:0 4px 16px rgba(193,68,14,0.13);}
+.cci{width:42px;height:42px;flex-shrink:0;background:rgba(193,68,14,0.08);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:19px;border:1px solid rgba(193,68,14,0.14);}
+.ccb h5{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--terra);margin-bottom:4px;}
+.ccb p,.ccb a{font-size:14px;color:var(--mud);font-weight:700;text-decoration:none;}
+.was{display:flex;gap:11px;flex-wrap:wrap;margin-top:22px;}
+.wb{flex:1;min-width:155px;background:#2BAA56;color:#fff;padding:13px 14px;border-radius:var(--r);text-decoration:none;font-weight:700;font-size:12px;letter-spacing:.5px;display:flex;align-items:center;justify-content:center;gap:7px;transition:.3s;}
+.wb:hover{background:#218C45;transform:translateY(-2px);box-shadow:0 6px 16px rgba(43,170,86,0.32);}
+.cf{background:var(--ivory);border-radius:var(--r);padding:38px;border:1px solid rgba(193,68,14,0.13);box-shadow:0 4px 22px rgba(42,26,14,0.07);}
+.cf h3{font-family:'Playfair Display';font-size:24px;color:var(--ink);margin-bottom:5px;}
+.cf>.sub{color:var(--stone);font-size:13px;margin-bottom:24px;}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:13px;}
+.fg{margin-bottom:13px;}
+.fg label{display:block;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--stone);margin-bottom:6px;}
+.fg input,.fg select,.fg textarea{width:100%;background:var(--cream);border:1.5px solid rgba(193,68,14,0.18);border-radius:var(--r);padding:11px 13px;color:var(--ink);font-family:'Lato';font-size:14px;outline:none;transition:.2s;}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--terra);background:var(--ivory);}
+.fg textarea{height:108px;resize:vertical;}
+.fg select{cursor:pointer;}
+.bsub{width:100%;background:var(--terra);color:var(--ivory);border:none;padding:14px;border-radius:var(--r);font-family:'Lato';font-weight:700;font-size:14px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:.3s;display:flex;align-items:center;justify-content:center;gap:9px;}
+.bsub:hover{background:var(--terra-dk);box-shadow:0 6px 18px rgba(193,68,14,0.32);}
+
+/* ---- MAP ---- */
+.mapw{height:330px;position:relative;overflow:hidden;}
+.mapw iframe{width:100%;height:100%;border:none;}
+.mappin{position:absolute;top:18px;left:18px;background:rgba(251,244,230,0.95);padding:15px 18px;border-radius:var(--r);border-left:4px solid var(--terra);box-shadow:0 4px 18px rgba(42,26,14,0.2);}
+.mappin h4{font-family:'Playfair Display';font-size:16px;color:var(--ink);margin-bottom:3px;}
+.mappin p{font-size:12px;color:var(--stone);}
+.mappin a{color:var(--terra);font-weight:700;text-decoration:none;font-size:13px;}
+
+/* ---- FOOTER ---- */
+footer{background:var(--earth);padding:56px 5% 26px;border-top:3px solid var(--terra);position:relative;overflow:hidden;}
+footer::before{content:'';position:absolute;inset:0;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Ccircle cx='40' cy='40' r='30' fill='none' stroke='%23F0A500' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='10' fill='none' stroke='%23F0A500' stroke-width='.5'/%3E%3Cline x1='10' y1='40' x2='70' y2='40' stroke='%23F0A500' stroke-width='.3'/%3E%3Cline x1='40' y1='10' x2='40' y2='70' stroke='%23F0A500' stroke-width='.3'/%3E%3C/svg%3E");background-size:80px 80px;pointer-events:none;}
+.fg2{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:38px;margin-bottom:46px;position:relative;}
+.fbrand p{color:rgba(237,217,176,0.56);font-size:13px;line-height:1.8;margin-top:14px;max-width:275px;}
+.fc h5{font-family:'Cinzel';font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px;color:var(--amber);}
+.fc ul{list-style:none;}
+.fc li{margin-bottom:9px;}
+.fc a{color:rgba(237,217,176,0.52);text-decoration:none;font-size:13px;transition:.2s;}
+.fc a:hover{color:var(--amber);}
+.fb{display:flex;justify-content:space-between;align-items:center;padding-top:22px;border-top:1px solid rgba(237,217,176,0.09);flex-wrap:wrap;gap:11px;position:relative;}
+.fb p{font-size:12px;color:rgba(237,217,176,0.3);}
+.sr{display:flex;gap:9px;}
+.sb2{width:36px;height:36px;border-radius:7px;background:rgba(237,217,176,0.06);border:1px solid rgba(237,217,176,0.1);display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:15px;transition:.2s;}
+.sb2:hover{background:var(--terra);border-color:var(--terra);}
+
+/* ---- FLOAT ---- */
+.fa{position:fixed;bottom:22px;right:18px;z-index:999;display:flex;flex-direction:column;align-items:flex-end;gap:9px;}
+.flbl{background:rgba(42,26,14,0.85);color:var(--sand);font-size:11px;font-weight:700;letter-spacing:1px;padding:4px 11px;border-radius:20px;white-space:nowrap;}
+.fbtn{width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:21px;text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,0.28);transition:.25s;}
+.fbtn:hover{transform:scale(1.1)translateY(-2px);}
+.fwa{background:#2BAA56;}
+.fcl{background:var(--terra);}
+
+/* ---- RESPONSIVE ---- */
+@media(max-width:1020px){.hero-cards{display:none;}}
+@media(max-width:900px){
+  .ag{grid-template-columns:1fr;gap:38px;}
+  .cg{grid-template-columns:1fr;gap:38px;}
+  .fg2{grid-template-columns:1fr 1fr;}
+  .fl{grid-template-columns:1fr;}
+  .fr{grid-template-columns:1fr;}
+}
+@media(max-width:768px){
+  .nav-links,.nav-cta{display:none;}
+  .hamburger{display:flex;}
+  nav{padding:0 4%;}
+  section{padding:66px 5%;}
+  .hero{padding:96px 5% 58px;}
+  .hero-stats{gap:20px;}
+  .asg{grid-template-columns:1fr 1fr;}
+  .fg2{grid-template-columns:1fr;}
+  .fb{flex-direction:column;text-align:center;}
+  .tb{padding:10px 13px;font-size:11px;}
+}
+</style>
+</head>
+<body>
+
+<!-- FLOATING ACTIONS -->
+<div class="fa">
+  <div class="flbl">💬 Chat with us</div>
+  <a href="https://wa.me/916361646590?text=Hello%20BGK%20Construction!%20I%20need%20information." class="fbtn fwa" title="WhatsApp">
+    <svg viewBox="0 0 24 24" width="24" height="24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2.05 21.9a.5.5 0 00.608.637l4.77-1.252A9.96 9.96 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+  </a>
+  <a href="tel:+916361646590" class="fbtn fcl" title="Call">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="white"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+  </a>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#home" class="logo">
+    <div class="logo-emblem">
+      <svg viewBox="0 0 40 40" width="26" height="26" fill="none" stroke="#FBF4E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="20,4 36,16 36,36 4,36 4,16"/>
+        <rect x="14" y="24" width="12" height="12" stroke="#F0A500" stroke-width="1.8"/>
+        <line x1="20" y1="24" x2="20" y2="36" stroke="#F0A500" stroke-width="1.2"/>
+      </svg>
+    </div>
+    <div>
+      <div class="logo-main">BGK</div>
+      <div class="logo-sub">Construction &amp; Materials</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#machinery">Machinery</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Get Quote</a>
+  <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+<div class="mobile-menu" id="mMen">
+  <a href="#home" onclick="cMob()">🏠 Home</a>
+  <a href="#services" onclick="cMob()">🔧 Services</a>
+  <a href="#products" onclick="cMob()">🧱 Products</a>
+  <a href="#machinery" onclick="cMob()">🚜 Machinery</a>
+  <a href="#about" onclick="cMob()">🌿 About Us</a>
+  <a href="#contact" onclick="cMob()">📞 Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-pat"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      Tumkur, Karnataka's Trusted Builder
+    </div>
+    <h1>Building<br><em>Stronger</em><br>Karnataka</h1>
+    <div class="hero-rule"></div>
+    <p>Complete construction solutions — skilled manpower, architectural design, premium building materials and heavy machinery across Tumkur Rural &amp; Urban.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-p">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        Free Quote
+      </a>
+      <a href="#services" class="btn-o">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 8 16 12 12 16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+        Our Services
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="hs-num">500+</div><div class="hs-lbl">Projects Done</div></div>
+      <div><div class="hs-num">15+</div><div class="hs-lbl">Years Experience</div></div>
+      <div><div class="hs-num">200+</div><div class="hs-lbl">Happy Clients</div></div>
+      <div><div class="hs-num">50+</div><div class="hs-lbl">Skilled Workers</div></div>
+    </div>
+  </div>
+  <div class="hero-cards">
+    <div class="hc"><div class="hc-icon">🧱</div><div class="hc-txt">Quality Materials<span>Sand · Stone · Cement</span></div></div>
+    <div class="hc"><div class="hc-icon">🚜</div><div class="hc-txt">Heavy Machinery<span>JCB · Trucks · Mixers</span></div></div>
+    <div class="hc"><div class="hc-icon">👷</div><div class="hc-txt">Expert Manpower<span>Masons · Engineers</span></div></div>
+    <div class="hc"><div class="hc-icon">📐</div><div class="hc-txt">Design &amp; Build<span>Residential · Commercial</span></div></div>
+  </div>
+</section>
+
+<!-- BANNER -->
+<div class="banner">
+  <div class="banner-inner">
+    <div class="bi"><div class="bd"></div>Quality Materials</div>
+    <div class="bi"><div class="bd"></div>Expert Manpower</div>
+    <div class="bi"><div class="bd"></div>Heavy Machinery Hire</div>
+    <div class="bi"><div class="bd"></div>Design &amp; Development</div>
+    <div class="bi"><div class="bd"></div>Tumkur Rural &amp; Urban</div>
+    <div class="bi"><div class="bd"></div>Fast Delivery</div>
+    <div class="bi"><div class="bd"></div>Trusted Since Years</div>
+    <div class="bi"><div class="bd"></div>ISI Certified Materials</div>
+    <div class="bi"><div class="bd"></div>Quality Materials</div>
+    <div class="bi"><div class="bd"></div>Expert Manpower</div>
+    <div class="bi"><div class="bd"></div>Heavy Machinery Hire</div>
+    <div class="bi"><div class="bd"></div>Design &amp; Development</div>
+    <div class="bi"><div class="bd"></div>Tumkur Rural &amp; Urban</div>
+    <div class="bi"><div class="bd"></div>Fast Delivery</div>
+    <div class="bi"><div class="bd"></div>Trusted Since Years</div>
+    <div class="bi"><div class="bd"></div>ISI Certified Materials</div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="sh">
+    <span class="stag">What We Do</span>
+    <h2 class="stitle">Our Construction Services</h2>
+    <p class="ssub">End-to-end construction solutions for residential, commercial and infrastructure projects across Tumkur district.</p>
+    <div class="orn"><div class="orn-line"></div><div class="orn-d"></div><div class="orn-line"></div></div>
+  </div>
+  <div class="sg">
+
+    <div class="sc">
+      <div class="si">
+        <svg viewBox="0 0 32 32"><circle cx="11" cy="9" r="4"/><path d="M3 28v-2a8 8 0 0116 0v2"/><circle cx="23" cy="11" r="3"/><path d="M27 28v-2a6 6 0 00-7-5.9"/><path d="M8 7.5Q11 4 14 7.5"/><line x1="7" y1="8.5" x2="15" y2="8.5"/></svg>
+      </div>
+      <h3>Construction Manpower</h3>
+      <p>Skilled and semi-skilled workers for all construction phases, deployed on-time with full safety compliance.</p>
+      <ul class="sl">
+        <li>Masons &amp; Bricklayers</li>
+        <li>Carpenters &amp; Shuttering Workers</li>
+        <li>Electricians &amp; Plumbers</li>
+        <li>Labourers &amp; Site Helpers</li>
+        <li>Site Supervisors &amp; Engineers</li>
+        <li>Welders &amp; Fabricators</li>
+      </ul>
+    </div>
+
+    <div class="sc">
+      <div class="si">
+        <svg viewBox="0 0 32 32"><rect x="4" y="4" width="24" height="24" rx="2"/><line x1="4" y1="12" x2="28" y2="12"/><line x1="12" y1="12" x2="12" y2="28"/><line x1="18" y1="16" x2="24" y2="16"/><line x1="18" y1="20" x2="24" y2="20"/><line x1="18" y1="24" x2="24" y2="24"/><line x1="8" y1="16" x2="8" y2="24"/><line x1="6" y1="20" x2="10" y2="20"/></svg>
+      </div>
+      <h3>Design &amp; Development</h3>
+      <p>Professional architectural planning and structural design for residential and commercial projects.</p>
+      <ul class="sl">
+        <li>Architectural Drawing &amp; Blueprints</li>
+        <li>Structural Design &amp; Planning</li>
+        <li>Interior Layout Planning</li>
+        <li>Building Permit Assistance</li>
+        <li>Site Survey &amp; Estimation</li>
+        <li>3D Visualization</li>
+      </ul>
+    </div>
+
+    <div class="sc">
+      <div class="si">
+        <svg viewBox="0 0 32 32"><polygon points="16,3 29,13 29,29 3,29 3,13"/><rect x="12" y="20" width="8" height="9"/><line x1="16" y1="20" x2="16" y2="29"/><rect x="5" y="16" width="5" height="5"/><rect x="22" y="16" width="5" height="5"/></svg>
+      </div>
+      <h3>Residential Construction</h3>
+      <p>Complete house building from foundation to finishing — tailored to your needs and budget.</p>
+      <ul class="sl">
+        <li>New Home Construction</li>
+        <li>House Renovation &amp; Repairs</li>
+        <li>Room Addition &amp; Extension</li>
+        <li>Compound Walls &amp; Gates</li>
+        <li>Roofing &amp; Waterproofing</li>
+        <li>Flooring &amp; Tiling</li>
+      </ul>
+    </div>
+
+    <div class="sc">
+      <div class="si">
+        <svg viewBox="0 0 32 32"><path d="M2 26 Q8 18 16 18 Q24 18 30 26"/><line x1="2" y1="26" x2="30" y2="26"/><path d="M8 26V14 Q8 8 16 8 Q24 8 24 14V26"/><line x1="10" y1="14" x2="22" y2="14"/><line x1="16" y1="8" x2="16" y2="14"/></svg>
+      </div>
+      <h3>Civil &amp; Infrastructure</h3>
+      <p>Heavy civil works and infrastructure development for government and private sector projects.</p>
+      <ul class="sl">
+        <li>Road &amp; Pathway Construction</li>
+        <li>Drainage &amp; Sewage Systems</li>
+        <li>Culverts &amp; Bridges</li>
+        <li>Retaining Walls</li>
+        <li>Land Development &amp; Levelling</li>
+        <li>Foundation &amp; Excavation</li>
+      </ul>
+    </div>
+
+    <div class="sc">
+      <div class="si">
+        <svg viewBox="0 0 32 32"><rect x="2" y="10" width="28" height="20"/><line x1="2" y1="10" x2="16" y2="2"/><line x1="30" y1="10" x2="16" y2="2"/><rect x="6" y="14" width="5" height="5"/><rect x="13.5" y="14" width="5" height="5"/><rect x="21" y="14" width="5" height="5"/><rect x="5" y="22" width="5" height="8"/><rect x="22" y="22" width="5" height="8"/><line x1="13" y1="22" x2="19" y2="22"/><line x1="16" y1="22" x2="16" y2="30"/></svg>
+      </div>
+      <h3>Commercial Construction</h3>
+      <p>Shops, warehouses, factories and commercial complexes built with precision and durability.</p>
+      <ul class="sl">
+        <li>Shops &amp; Showrooms</li>
+        <li>Warehouses &amp; Godowns</li>
+        <li>Factory Sheds</li>
+        <li>Office Complexes</li>
+        <li>Pre-engineered Buildings</li>
+      </ul>
+    </div>
+
+    <div class="sc">
+      <div class="si">
+        <svg viewBox="0 0 32 32"><rect x="2" y="12" width="18" height="14"/><path d="M20 14L28 14L30 20L30 26L20 26Z"/><circle cx="8" cy="27" r="3"/><circle cx="24" cy="27" r="3"/><line x1="2" y1="18" x2="20" y2="18"/><rect x="4" y="14" width="6" height="4"/></svg>
+      </div>
+      <h3>Material Supply &amp; Transport</h3>
+      <p>Timely delivery of all building materials with our own fleet across Tumkur district.</p>
+      <ul class="sl">
+        <li>Sand &amp; M-Sand Delivery</li>
+        <li>Aggregate &amp; Gravel Supply</li>
+        <li>Cement &amp; Steel Supply</li>
+        <li>Brick &amp; Block Delivery</li>
+        <li>Stone &amp; Soil Transport</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="pbg"></div>
+  <div class="sh">
+    <span class="stag">Our Products</span>
+    <h2 class="stitle">Building Materials &amp; Supplies</h2>
+    <p class="ssub">Premium materials sourced and supplied directly in Tumkur Rural &amp; Urban — fresh, graded and on time.</p>
+    <div class="orn"><div class="orn-line"></div><div class="orn-d"></div><div class="orn-line"></div></div>
+  </div>
+  <div class="ptabs">
+    <button class="tb a" onclick="sT('masonry',this)">🧱 Masonry</button>
+    <button class="tb" onclick="sT('aggregates',this)">🪨 Aggregates</button>
+    <button class="tb" onclick="sT('cement',this)">🏗️ Cement &amp; Steel</button>
+    <button class="tb" onclick="sT('soil',this)">🌿 Sand &amp; Soil</button>
+  </div>
+  <div id="t-masonry" class="tc a">
+    <div class="pc"><div class="pi">🧱</div><div class="pinfo"><h4>M-Sand</h4><p>Manufactured sand for masonry, concrete and plastering.</p><span class="pbadge">✔ Available</span></div></div>
+    <div class="pc"><div class="pi">🟫</div><div class="pinfo"><h4>Red Clay Bricks</h4><p>Traditional fired bricks. Standard &amp; modular sizes.</p><span class="pbadge">✔ Available</span></div></div>
+    <div class="pc"><div class="pi">⬜</div><div class="pinfo"><h4>Hollow / Solid Blocks</h4><p>Concrete blocks for partition and load-bearing walls.</p><span class="pbadge">✔ Available</span></div></div>
+    <div class="pc"><div class="pi">🪨</div><div class="pinfo"><h4>Cut Stones (Ashlar)</h4><p>Quarried stones for compound walls and foundations.</p><span class="pbadge">✔ Available</span></div></div>
+    <div class="pc"><div class="pi">🟦</div><div class="pinfo"><h4>Pavers &amp; Kerb Stones</h4><p>Concrete pavers for driveways and footpaths.</p><span class="pbadge">✔ Available</span></div></div>
+  </div>
+  <div id="t-aggregates" class="tc">
+    <div class="pc"><div class="pi">🪨</div><div class="pinfo"><h4>Granite Jelly</h4><p>Crushed granite 6mm, 12mm, 20mm for concrete.</p><span class="pbadge">✔ Available</span></div></div>
+    <div class="pc"><div class="pi">⚫</div><div class="pinfo"><h4>Quarry Dust</h4><p>Fine granite powder as sand substitute for plastering.</p><span class="pbadge">✔ Available</span></div></div>
+    <div class="pc"><div class="pi">🌑</div><div class="pinfo"><h4>Rubble / Boulders</h4><p>Large stones for foundation and retaining walls.</p><span class="pbadge">✔ Available</span></div></div>
+    <div class="pc"><div class="pi">🔵</div><div class="pinfo"><h4>Blue Metal (Gitti)</h4><p>Hard angular aggregate for high-strength concrete.</p><span class="pbadge">✔ Available</span></div></div>
+  </div>
+  <div id="t-cement" class="tc">
+    <div class="pc"><div class="pi">🏗️</div><div class="pinfo"><h4>OPC / PPC Cement</h4><p>Ultratech, ACC, Ramco — all grades available.</p><span class="pbadge">✔ Available</span></div></div>
+    <div class="pc"><div class="pi">🔩</div><div class="pinfo"><h4>TMT Steel Bars</h4><p>Fe500/Fe550 grade 8mm–32mm from leading mills.</p><span class="pbadge">✔ Available</span></div></div>
+    <div class="pc"><div class="pi">🏛️</div><div class="pinfo"><h4>MS Angles &amp; Channels</h4><p>Structural steel for roofing and framework.</p><span class="pbadge">✔ Available</span></div></div>
+    <div class="pc"><div class="pi">🔗</div><div class="pinfo"><h4>Binding Wire</h4><p>Annealed iron wire for tying rebars in RCC.</p><span class="pbadge">✔ Available</span></div></div>
+    <div class="pc"><div class="pi">📦</div><div class="pinfo"><h4>Ready Mix Concrete</h4><p>Pre-mixed concrete of various grades on order.</p><span class="pbadge">On Order</span></div></div>
+  </div>
+  <div id="t-soil" class="tc">
+    <div class="pc"><div class="pi">🟡</div><div class="pinfo"><h4>River Sand</h4><p>Natural river sand for concrete and plastering.</p><span class="pbadge">✔ Available</span></div></div>
+    <div class="pc"><div class="pi">🟤</div><div class="pinfo"><h4>Red Soil / Fill Soil</h4><p>Laterite and red soil for landscaping and filling.</p><span class="pbadge">✔ Available</span></div></div>
+    <div class="pc"><div class="pi">⬛</div><div class="pinfo"><h4>Black Cotton Soil</h4><p>Expansive clay for agriculture and filling.</p><span class="pbadge">✔ Available</span></div></div>
+    <div class="pc"><div class="pi">🌿</div><div class="pinfo"><h4>Garden Soil / Compost</h4><p>Rich organic mix for landscaping and terracing.</p><span class="pbadge">✔ Available</span></div></div>
+    <div class="pc"><div class="pi">🏜️</div><div class="pinfo"><h4>Gravel &amp; Pebbles</h4><p>Washed pebbles for drainage and decorative use.</p><span class="pbadge">✔ Available</span></div></div>
+  </div>
+</section>
+
+<!-- MACHINERY -->
+<section id="machinery">
+  <div class="sh">
+    <span class="stag">Fleet &amp; Equipment</span>
+    <h2 class="stitle">Our Machinery &amp; Vehicles</h2>
+    <p class="ssub">Modern equipment and vehicles available for hire or project deployment across Tumkur district.</p>
+    <div class="orn" style="margin-top:14px;"><div class="orn-line" style="background:linear-gradient(90deg,transparent,rgba(240,165,0,0.28),transparent)"></div><div class="orn-d" style="background:var(--amber)"></div><div class="orn-line" style="background:linear-gradient(90deg,transparent,rgba(240,165,0,0.28),transparent)"></div></div>
+  </div>
+  <div class="mg">
+    <div class="mc"><div class="mw">🏗️</div><div class="minfo"><h4>Cement Mixers</h4><p>Portable and transit concrete mixers for on-site production.</p><div class="ms"><span>250L–750L</span><span>Diesel/Electric</span><span>For Hire</span></div></div></div>
+    <div class="mc"><div class="mw">🚜</div><div class="minfo"><h4>Earth Movers (JCB)</h4><p>Backhoe loaders and excavators for digging and site grading.</p><div class="ms"><span>JCB 3DX</span><span>Excavation</span><span>Daily Hire</span></div></div></div>
+    <div class="mc"><div class="mw">🚛</div><div class="minfo"><h4>Trucks (Tipper / Lorry)</h4><p>Heavy tippers for sand, stone and soil material transport.</p><div class="ms"><span>10–20 Ton</span><span>Local Trips</span><span>For Hire</span></div></div></div>
+    <div class="mc"><div class="mw">🚚</div><div class="minfo"><h4>Trailers</h4><p>Heavy-duty trailers for machinery and prefab material transport.</p><div class="ms"><span>20–40 Ton</span><span>State-wide</span><span>On Contract</span></div></div></div>
+    <div class="mc"><div class="mw">🚜</div><div class="minfo"><h4>Tractors with Trolley</h4><p>Agricultural tractors for rural construction material transport.</p><div class="ms"><span>35–75 HP</span><span>Rural Areas</span><span>Daily Hire</span></div></div></div>
+    <div class="mc"><div class="mw">⚡</div><div class="minfo"><h4>Generators</h4><p>Diesel generators for continuous site power supply.</p><div class="ms"><span>15–125 KVA</span><span>For Hire</span><span>24/7 Support</span></div></div></div>
+    <div class="mc"><div class="mw">🔧</div><div class="minfo"><h4>Vibrators &amp; Compactors</h4><p>Needle vibrators, plate compactors and road rollers.</p><div class="ms"><span>Plate Compactor</span><span>Needle Vibrator</span></div></div></div>
+    <div class="mc"><div class="mw">🏗️</div><div class="minfo"><h4>Scaffolding &amp; Formwork</h4><p>Modular steel scaffolding and shuttering for all structures.</p><div class="ms"><span>Rent/Hire</span><span>All Sizes</span></div></div></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="ag">
+    <div class="al">
+      <div class="sh">
+        <span class="stag">Why Choose BGK</span>
+        <h2 class="stitle">Trusted Partners in Construction</h2>
+        <div class="orn"><div class="orn-line"></div><div class="orn-d"></div><div class="orn-line"></div></div>
+      </div>
+      <p>BGK Construction &amp; Materials is a leading construction company rooted in Tumkur, Karnataka. We serve both rural and urban clients with complete construction solutions — from raw material supply to turnkey project execution.</p>
+      <p>Our experienced engineers, skilled workers and dedicated project managers ensure every project is delivered on time, within budget, and to the highest quality standards.</p>
+      <div class="fl">
+        <div class="fi"><div class="fic">🛡️</div><div class="ft"><h5>Quality Assured</h5><p>ISI marked materials only</p></div></div>
+        <div class="fi"><div class="fic">⏱️</div><div class="ft"><h5>On-Time Delivery</h5><p>Project timelines respected</p></div></div>
+        <div class="fi"><div class="fic">💰</div><div class="ft"><h5>Fair Pricing</h5><p>Best rates in Tumkur</p></div></div>
+        <div class="fi"><div class="fic">📍</div><div class="ft"><h5>Local Expertise</h5><p>Rural &amp; urban coverage</p></div></div>
+        <div class="fi"><div class="fic">📞</div><div class="ft"><h5>7-Day Support</h5><p>Always available on call</p></div></div>
+        <div class="fi"><div class="fic">👷</div><div class="ft"><h5>Safety First</h5><p>Strict safety protocols</p></div></div>
+      </div>
+    </div>
+    <div class="asg">
+      <div class="sb acc"><div class="sbn">500+</div><div class="sbl">Projects Completed</div></div>
+      <div class="sb"><div class="sbn">15+</div><div class="sbl">Years Experience</div></div>
+      <div class="sb"><div class="sbn">200+</div><div class="sbl">Happy Clients</div></div>
+      <div class="sb"><div class="sbn">50+</div><div class="sbl">Skilled Workers</div></div>
+      <div class="sb"><div class="sbn">2</div><div class="sbl">Districts Covered</div></div>
+      <div class="sb"><div class="sbn">10+</div><div class="sbl">Machines in Fleet</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="sh c">
+    <span class="stag c">Get In Touch</span>
+    <h2 class="stitle">Contact BGK Construction</h2>
+    <p class="ssub">Free site visit, quote or general queries — available 7 days a week across Tumkur.</p>
+    <div class="orn" style="justify-content:center;"><div class="orn-line"></div><div class="orn-d"></div><div class="orn-line"></div></div>
+  </div>
+  <div class="cg">
+    <div>
+      <h3 style="font-family:'Playfair Display';font-size:22px;color:var(--ink);margin-bottom:5px;">Reach Us Directly</h3>
+      <p style="color:var(--stone);font-size:13px;">Call, WhatsApp or email — we respond fast.</p>
+      <div class="ccards">
+        <a class="cc" href="tel:+916361646590"><div class="cci">📞</div><div class="ccb"><h5>Primary Phone</h5><p>+91 63616 46590</p></div></a>
+        <a class="cc" href="tel:+919844516068"><div class="cci">📱</div><div class="ccb"><h5>Alternate Mobile</h5><p>+91 98445 16068</p></div></a>
+        <a class="cc" href="mailto:kishorkumarbg1999@gmail.com"><div class="cci">✉️</div><div class="ccb"><h5>Email Address</h5><p>kishorkumarbg1999@gmail.com</p></div></a>
+        <div class="cc"><div class="cci">📍</div><div class="ccb"><h5>Location</h5><p>Tumkur Rural &amp; Urban, Karnataka</p></div></div>
+      </div>
+      <div style="margin-top:20px;">
+        <p style="font-size:10px;color:var(--stone);margin-bottom:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;">WhatsApp Us Now</p>
+        <div class="was">
+          <a class="wb" href="https://wa.me/916361646590?text=Hello%20BGK%20Construction!%20I%20need%20information." target="_blank">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2.05 21.9a.5.5 0 00.608.637l4.77-1.252A9.96 9.96 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+            63616 46590
+          </a>
+          <a class="wb" href="https://wa.me/919844516068?text=Hello%20BGK%20Construction!%20I%20need%20information." target="_blank">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2.05 21.9a.5.5 0 00.608.637l4.77-1.252A9.96 9.96 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+            98445 16068
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="cf">
+      <h3>Send Us a Message</h3>
+      <p class="sub">We'll get back to you within a few hours.</p>
+      <div class="fr">
+        <div class="fg"><label>Your Name</label><input type="text" id="fn" placeholder="Full Name"></div>
+        <div class="fg"><label>Phone Number</label><input type="tel" id="fp" placeholder="+91 XXXXX XXXXX"></div>
+      </div>
+      <div class="fg"><label>Email Address</label><input type="email" id="fe" placeholder="your@email.com"></div>
+      <div class="fg"><label>Service Required</label>
+        <select id="fs">
+          <option value="">— Select a Service —</option>
+          <option>Construction Manpower</option>
+          <option>Design &amp; Development</option>
+          <option>Residential Construction</option>
+          <option>Commercial Construction</option>
+          <option>Civil &amp; Infrastructure</option>
+          <option>Materials Supply</option>
+          <option>Machinery Hire</option>
+          <option>Other / General Inquiry</option>
+        </select>
+      </div>
+      <div class="fg"><label>Your Message</label><textarea id="fm" placeholder="Describe your project or requirement..."></textarea></div>
+      <button class="bsub" onclick="sendWA()">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2.05 21.9a.5.5 0 00.608.637l4.77-1.252A9.96 9.96 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+        Send via WhatsApp
+      </button>
+      <p style="text-align:center;font-size:12px;color:var(--stone);margin-top:13px;">Or email: <a href="mailto:kishorkumarbg1999@gmail.com" style="color:var(--terra);font-weight:700;">kishorkumarbg1999@gmail.com</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<div class="mapw">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62177.48247327068!2d77.06507!3d13.33780!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb027767c5f4f11%3A0xd7c83a76e7a7a3b7!2sTumkur%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1700000000000" allowfullscreen loading="lazy"></iframe>
+  <div class="mappin">
+    <h4>📍 BGK Construction</h4>
+    <p>Tumkur Rural &amp; Urban, Karnataka</p>
+    <a href="tel:+916361646590">📞 +91 63616 46590</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fg2">
+    <div class="fbrand">
+      <a href="#home" class="logo" style="text-decoration:none;">
+        <div class="logo-emblem"><svg viewBox="0 0 40 40" width="22" height="22" fill="none" stroke="#FBF4E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="20,4 36,16 36,36 4,36 4,16"/><rect x="14" y="24" width="12" height="12" stroke="#F0A500" stroke-width="1.8"/><line x1="20" y1="24" x2="20" y2="36" stroke="#F0A500" stroke-width="1.2"/></svg></div>
+        <div><div class="logo-main">BGK</div><div class="logo-sub">Construction &amp; Materials</div></div>
+      </a>
+      <p>Your trusted construction partner in Tumkur, Karnataka. From foundation to finish — quality, speed and integrity.</p>
+      <div class="sr" style="margin-top:18px;">
+        <a class="sb2" href="https://wa.me/916361646590" title="WhatsApp">💬</a>
+        <a class="sb2" href="tel:+916361646590" title="Call">📞</a>
+        <a class="sb2" href="mailto:kishorkumarbg1999@gmail.com" title="Email">✉️</a>
+      </div>
+    </div>
+    <div class="fc">
+      <h5>Services</h5>
+      <ul>
+        <li><a href="#services">Construction Manpower</a></li>
+        <li><a href="#services">Design &amp; Development</a></li>
+        <li><a href="#services">Residential Construction</a></li>
+        <li><a href="#services">Commercial Projects</a></li>
+        <li><a href="#services">Civil &amp; Infrastructure</a></li>
+        <li><a href="#services">Material Supply</a></li>
+      </ul>
+    </div>
+    <div class="fc">
+      <h5>Products</h5>
+      <ul>
+        <li><a href="#products">M-Sand &amp; River Sand</a></li>
+        <li><a href="#products">Bricks &amp; Blocks</a></li>
+        <li><a href="#products">Stones &amp; Aggregates</a></li>
+        <li><a href="#products">Cement (All Brands)</a></li>
+        <li><a href="#products">TMT Steel Bars</a></li>
+        <li><a href="#products">Soil &amp; Fill Material</a></li>
+      </ul>
+    </div>
+    <div class="fc">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="tel:+916361646590">📞 63616 46590</a></li>
+        <li><a href="tel:+919844516068">📱 98445 16068</a></li>
+        <li><a href="mailto:kishorkumarbg1999@gmail.com">✉️ Email Us</a></li>
+        <li><a href="#">📍 Tumkur Rural, KA</a></li>
+        <li><a href="#">📍 Tumkur Urban, KA</a></li>
+        <li><a href="https://wa.me/916361646590">💬 WhatsApp Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="fb">
+    <p>© 2024 BGK Construction &amp; Materials. All rights reserved. | Tumkur, Karnataka, India</p>
+    <div class="sr">
+      <a class="sb2" href="https://wa.me/916361646590">💬</a>
+      <a class="sb2" href="tel:+916361646590">📞</a>
+      <a class="sb2" href="mailto:kishorkumarbg1999@gmail.com">✉️</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(){document.getElementById('mMen').classList.toggle('open');}
+function cMob(){document.getElementById('mMen').classList.remove('open');}
+window.addEventListener('scroll',()=>document.getElementById('mMen').classList.remove('open'));
+
+function sT(n,b){
+  document.querySelectorAll('.tc').forEach(t=>t.classList.remove('a'));
+  document.querySelectorAll('.tb').forEach(x=>x.classList.remove('a'));
+  document.getElementById('t-'+n).classList.add('a');
+  b.classList.add('a');
+}
+
+function sendWA(){
+  const n=document.getElementById('fn').value||'Customer';
+  const p=document.getElementById('fp').value||'N/A';
+  const e=document.getElementById('fe').value||'N/A';
+  const s=document.getElementById('fs').value||'General Inquiry';
+  const m=document.getElementById('fm').value||'No details provided';
+  const t=`🏗️ *New Enquiry – BGK Construction*\n\n👤 Name: ${n}\n📞 Phone: ${p}\n📧 Email: ${e}\n🔧 Service: ${s}\n📝 Message: ${m}\n\n_Sent via BGK website_`;
+  window.open('https://wa.me/916361646590?text='+encodeURIComponent(t),'_blank');
+}
+
+// Scroll reveal
+const obs=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}});
+},{threshold:0.08});
+document.querySelectorAll('.sc,.pc,.mc,.sb,.cc,.hc').forEach(el=>{
+  el.style.opacity='0';el.style.transform='translateY(20px)';
+  el.style.transition='opacity 0.5s ease, transform 0.5s ease';
+  obs.observe(el);
+});
+</script>
+</body>
+</html>
